@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+
+        function numberToObject(num) {
+            if (!Number.isInteger(num) || num < 0 || num > 999) {
+                console.log('Число должно быть в диапазоне от 0 до 999!');
+                return {};
+            }
+
+            return {
+                units: num % 10,
+                hundreds: Math.floor(num / 100),
+                tens: Math.floor(num / 10) % 10,
+            }
+        }
+            console.log(numberToObject(750));
+
+    </script>
+</body>
+
+</html>
